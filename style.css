@@ -1,0 +1,55 @@
+html {
+    font-family: roboto;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+}
+
+:root {
+    --main-bg-color: rgb(184, 126, 135);
+    --main-text-color: rgb(38, 38, 38);
+}
+
+/*header styling*/
+header {
+    background-color: var(--main-bg-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    color: var(--main-text-color);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.logo {
+    height: 70px;
+    width: auto;
+    margin:0;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+header > .right > ul {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+header > .right > ul > li {
+    font-size: larger;
+    list-style: none;
+}
+
+@media (max-width: 650px) {
+    header {
+        flex-direction: column;
+    }
+    header > .right > ul {
+        flex-direction: column;
+    }
+}
