@@ -12,7 +12,7 @@ body {
 :root {
     --main-bg-color: rgb(182, 182, 182);
     --second-bg-color: rgb(230, 230, 230);
-    --blue-color: rgba(71, 81, 109, 0.493);
+    --blue-color: silver;
     --main-text-color: rgb(38, 38, 38);
 }
 
@@ -93,9 +93,8 @@ header > .right > ul > li {
     padding: 10px 50px;
     font-size: var(--fontSize-2);
     background-color: var(--blue-color);
-    color: var(--main-text-color);
     border-radius: 13px;
-    border: 0;
+    border-color: var(--main-text-color);
     font-family: var(--font-family);
 }
 
@@ -150,10 +149,71 @@ header > .right > ul > li {
 }
 
 .window {
-    background-color: var(--blue-color);
+    background-color: var(--main-bg-color);
     height: 150px;
     width: 150px;
     max-width: 100%;
     border-radius: 13px;
 
 }
+
+/* third part */
+
+.third-page {
+    background-color: var(--second-bg-color);
+    padding: var(--pages-padding);
+    
+}
+
+.third-page > .quote {
+    font-size: var(--fontSize-3);
+    font-style: italic;
+    max-width: 700px;
+    line-height: 150%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.third-page > .quote > .author {
+    align-self: flex-end;
+    padding: 30px;
+    font-weight: bold;
+}
+
+@media (max-width: 650px) {
+    .third-page > .quote {
+     
+        font-size: var(--fontSize-2);
+    }
+}
+
+/*footer*/
+.footer {
+    background-color: var(--main-bg-color);
+    padding: var(--pages-padding);
+    display: flex;
+    justify-content: center;
+    
+}
+.footer-content {
+    padding: 30px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--second-bg-color);
+    border-radius: 15px;
+}
+
+.footer-content > button {
+    width:200px;
+    padding: 10px;
+    font-family: var(--font-family);
+    font-size: var(--fontSize-3);
+    border-radius: 15px;
+    border-color: var(--main-text-color);
+    background-color: var(--blue-color);
+}
+
