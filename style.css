@@ -1,5 +1,5 @@
 html {
-    font-family: roboto;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 body {
@@ -8,8 +8,15 @@ body {
 }
 
 :root {
-    --main-bg-color: rgb(184, 126, 135);
+    --main-bg-color: rgb(182, 182, 182);
     --main-text-color: rgb(38, 38, 38);
+}
+
+:root {
+    --font-family: 'Times New Roman', Times, serif;
+    --fontSize-1: 1rem;
+    --fontSize-2: 1.18rem;
+    --fontSize-3: 1.75rem;
 }
 
 /*header styling*/
@@ -41,7 +48,7 @@ header > .right > ul {
 }
 
 header > .right > ul > li {
-    font-size: larger;
+    font-size: var(--fontSize-2);
     list-style: none;
 }
 
@@ -51,5 +58,51 @@ header > .right > ul > li {
     }
     header > .right > ul {
         flex-direction: column;
+    }
+}
+
+/*first page*/
+.first-page {
+    background-color: var(--main-bg-color);
+    padding: 50px 10px;
+    margin: auto;
+    color: var(--main-text-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 110%;
+}
+.first-page > h1 {
+    font-size: var(--fontSize-3);
+}
+.intro {
+    max-width: 500px;
+    font-size: var(--fontSize-1);
+}
+
+.first-page > .intro > button {
+    padding: 10px 50px;
+    font-size: var(--fontSize-2);
+    background-color: rgba(122, 122, 248, 0.715);
+    color: var(--main-text-color);
+    border-radius: 13px;
+    border: 0;
+    font-family: var(--font-family);
+}
+
+.product {
+    height: 300px;
+    max-height: fit-content;
+    border-radius: 13px;
+}
+
+@media (max-width: 650px) {
+    .first-page {
+        display: flex;
+        flex-direction: column;
+    }
+    .intro {
+        padding-bottom: 30px;
     }
 }
